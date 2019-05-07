@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<h1>注册表单</h1>
+    <!-- 
+    <form>标签 定义整体的表单区域
+        action属性 定义表单数据提交地址
+        method属性 定义表单提交的方式，get和post
+    -->
+	<form action="" method="post">		
+		<div>
+            <!-- 
+            <label>标签 为表单元素定义文字标注 
+            for属性，使点击用户名就跳转到输入栏 
+            -->
+			<label for="username">用户名：</label>
+            <!-- 
+            type属性
+                type="text" 定义单行文本输入框
+                type="password" 定义密码输入框
+                type="radio" 定义单选框
+                type="checkbox" 定义复选框
+                type="file" 定义上传文件
+                type="submit" 定义提交按钮
+                type="reset" 定义重置按钮
+                type="button" 定义一个普通按钮
+                type="image" 定义图片作为提交按钮，用src属性定义图片地址
+                type="hidden" 定义一个隐藏的表单域，用来存储值
+            value属性 定义表单元素的值
+            name属性 定义表单元素的名称，此名称是提交数据时的键名
+            -->
+			<input type="text" name="username" id="username" />
+		</div>		
+		<br>
+		<div>
+			<label for="password">密&nbsp;&nbsp;&nbsp;码：</label>
+			<input type="password" name="password" id="password">
+		</div>
+		<br>
+		<div>
+			<label>性&nbsp;&nbsp;&nbsp;别：</label>
+			<input type="radio" name="gender" value="0" id="male"> <label for="male">男</label>
+			<input type="radio" name="gender" value="1" id="female"> <label for="female">女</label>
+		</div>
+		<br>
+		<div>
+			<label>爱&nbsp;&nbsp;&nbsp;好：</label>
+			<input type="checkbox" name="like" value="study"> 学习
+			<input type="checkbox" name="like" value="python"> python
+			<input type="checkbox" name="like" value="frontend"> 前端
+			<input type="checkbox" name="like" value="beauty"> 美少女
+		</div>
+		<br>
+		<div>
+			<label>玉&nbsp;&nbsp;&nbsp;照：</label>
+			<input type="file" name="">
+		</div>
+		<br>
+		<div>
+			<label>个人介绍：</label>
+            <!--
+            <textarea>标签 定义多行文本输入框
+            -->
+			<textarea name="introduce"></textarea>
+		</div>	
+		<br>
+		<div>
+			<label>籍&nbsp;&nbsp;&nbsp;贯：</label>
+            <!--
+            <select>标签 定义下拉表单元素
+            <option>标签 与<select>标签配合，定义下拉表单元素中的选项 
+            -->
+			<select name="site">
+				<option value="0">北京</option>
+				<option value="1">上海</option>					
+				<option value="2">河南</option>	
+			</select>
+		</div>
+		<br>
+		<input type="hidden" name="hid01" value="12">
+		<div>
+			<input type="submit" name="" value="提交">
+			<!-- 
+            用图片控件代替submit按钮提交，一般会导致提交两次，不建议使用
+            <input type="image" src="images/goods.jpg" name=""> 
+            -->
+			<input type="reset" name="" value="重置">
+		</div>
+	</form>
+</body>
+</html>
